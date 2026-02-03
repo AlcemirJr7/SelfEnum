@@ -3,18 +3,17 @@ using System.Text.Json.Serialization;
 
 namespace SelfEnumTipoPessoa.SmartEnum
 {
-    public class TipoPessoaConverter : JsonConverter<TipoPessoa>
+    public class SelfEnumConverter<T> : JsonConverter<T> where T : IParsable<T>
     {
-        public override TipoPessoa Read(ref Utf8JsonReader reader, Type typeToConvert, JsonSerializerOptions options)
+        public override T Read(ref Utf8JsonReader reader, Type typeToConvert, JsonSerializerOptions options)
         {
             var stringValue = reader.GetString();
-
-            return TipoPessoa.Parse(stringValue ?? string.Empty, null);
+            return T.Parse(stringValue ?? string.Empty, null);
         }
 
-        public override void Write(Utf8JsonWriter writer, TipoPessoa value, JsonSerializerOptions options)
+        public override void Write(Utf8JsonWriter writer, T value, JsonSerializerOptions options)
         {
-            writer.WriteStringValue(value.Value);
+            writer.WriteStringValue(value?.ToString());
         }
     }
 }

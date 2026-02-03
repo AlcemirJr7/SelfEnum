@@ -4,7 +4,7 @@ using System.Text.Json.Serialization;
 
 namespace SelfEnumTipoPessoa.SmartEnum;
 
-[JsonConverter(typeof(TipoPessoaConverter))]
+[JsonConverter(typeof(SelfEnumConverter<TipoPessoa>))]
 public readonly record struct TipoPessoa : IParsable<TipoPessoa>
 {
     public static readonly FrozenSet<string> ValidTypes = TipoPessoaDef.Types;
