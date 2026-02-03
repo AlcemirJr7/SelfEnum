@@ -7,7 +7,11 @@ namespace SelfEnumTipoPessoa.SmartEnum;
 [JsonConverter(typeof(SelfEnumConverter<TipoPessoa>))]
 public readonly record struct TipoPessoa : IParsable<TipoPessoa>
 {
-    public static readonly FrozenSet<string> ValidTypes = TipoPessoaDef.Types;
+    public static readonly FrozenSet<string> ValidTypes = new[]
+    {
+        TipoPessoaDef.Fisica,
+        TipoPessoaDef.Juridica
+    }.ToFrozenSet();
 
     public string Value { get; } = string.Empty;
 
