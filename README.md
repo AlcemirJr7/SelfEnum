@@ -1,5 +1,3 @@
-O "SefEnum" seria o sucessor legítimo do Smart Enum?
-
 1. O Fim do "Primitive Obsession"
 Muitos desenvolvedores usam string ou int para representar categorias (como Tipo Pessoa). Isso causa a "Obsessão por Primitivos".
 
@@ -37,3 +35,6 @@ mantendo a compatibilidade da API enquanto o seu backend desfruta de tipagem for
 Foi escrito por uma IA? Sim, até aqui. rsrsrs...
 
 Creio que essa solução que criei seja útil para sistemas complexos;
+
+O "SefEnum" seria o sucessor legítimo do Smart Enum?
+
