@@ -34,7 +34,7 @@ mantendo a compatibilidade da API enquanto o seu backend desfruta de tipagem for
 
 Foi escrito por uma IA? Sim, até aqui. rsrsrs...
 
-Creio que essa solução que criei seja útil para sistemas complexos;
+Acredito que essa solução que criei seja útil para sistemas complexos;
 
 O "SefEnum" seria o sucessor legítimo do Smart Enum?
 
