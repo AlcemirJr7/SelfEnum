@@ -138,3 +138,14 @@ Se o *Smart Enum* foi uma resposta às limitações do passado, o **SefEnum é u
 A ideia, no entanto, é profundamente humana: **reduzir ambiguidade, tornar o domínio explícito e deixar o compilador trabalhar a seu favor**.
 
 Se você acredita que tipos contam histórias — o SefEnum ajuda a contá-las melhor.
+
+
+## 💡 Apoio ao Projeto
+
+Este projeto é mantido de forma independente.
+Se ele gerou valor real para você ou sua equipe, considere apoiar sua continuidade e evolução.
+A contribuição é voluntária e ajuda a manter melhorias contínuas.
+
+### Formas de apoio
+- Pix
+- Crypto
