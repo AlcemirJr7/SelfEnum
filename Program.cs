@@ -1,6 +1,6 @@
 using Microsoft.OpenApi.Models;
 using SmartEnum;
-using SelfEnumTipoPessoa.SmartEnum;
+using SelfEnumPersonType.SmartEnum;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -8,10 +8,10 @@ builder.Services.AddOpenApi();
 
 builder.Services.AddSwaggerGen(o =>
 {
-    o.MapType<TipoPessoa>(() => new OpenApiSchema
+    o.MapType<PersonType>(() => new OpenApiSchema
     {
-        Type = "string", // Mostrar como string no Swagger
-        Description = TipoPessoa.Descriptions,
+        Type = "string", // Show as string Swagger
+        Description = PersonType.Descriptions,
     });
 });
 
@@ -26,28 +26,28 @@ if (app.Environment.IsDevelopment())
 
 app.UseMiddleware<ExceptionHandlingMiddleware>();
 
-app.MapGet("/GetTipoPessoa", () =>
+app.MapGet("/GetPersonType", () =>
 {
     var result = new
     {
-        TiposPessoa = TipoPessoa.Descriptions
+        PersonType = PersonType.Descriptions
     };
 
     return Results.Ok(result);
 })
-.WithName("GetTipoPessoa");
+.WithName("GetPersonType");
 
-app.MapPost("/CreatePessoa", (PessoaRequest request) =>
+app.MapPost("/CreatePerson", (PersonRequest request) =>
 {
     var result = new
     {
         Message = "Pessoa criada com sucesso!",
-        request.Nome,
-        TipoPessoa = request.TipoPessoa.Value
+        request.Name,
+        PersonType = request.PersonType.Value
     };
 
     return Results.Ok(result);
 })
-.WithName("CreatePessoa");
+.WithName("CreatePerson");
 
 app.Run();

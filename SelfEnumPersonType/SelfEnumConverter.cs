@@ -1,7 +1,7 @@
 ﻿using System.Text.Json;
 using System.Text.Json.Serialization;
 
-namespace SelfEnumTipoPessoa.SmartEnum
+namespace SelfEnumPersonType.SmartEnum
 {
     public class SelfEnumConverter<T> : JsonConverter<T> where T : IParsable<T>
     {
